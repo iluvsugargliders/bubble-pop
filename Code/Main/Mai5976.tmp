@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd5nxssueqosr"]
+
+[ext_resource type="Script" path="res://Main/main.gd" id="1_ch183"]
+[ext_resource type="PackedScene" uid="uid://xvr1tigau2xd" path="res://Bubble/bubble.tscn" id="1_npxvk"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ch183")
+
+[node name="Bubble" parent="." instance=ExtResource("1_npxvk")]
+position = Vector2(254, 198)
+
+[node name="Bubble2" parent="." instance=ExtResource("1_npxvk")]
+position = Vector2(553, 309)
