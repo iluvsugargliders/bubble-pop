@@ -9,5 +9,6 @@ script = ExtResource("1_gsggw")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Bubble" type="Sprite2D" parent="."]
-position = Vector2(-10, 1)
+position = Vector2(-7.62939e-06, -1.00001)
+scale = Vector2(0.607422, 0.607422)
 texture = ExtResource("2_bg0bq")
