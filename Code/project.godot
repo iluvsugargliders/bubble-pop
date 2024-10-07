@@ -12,8 +12,8 @@ config_version=5
 
 config/name="Bubble Pop"
 run/main_scene="res://Main/Main.tscn"
-config/features=PackedStringArray("4.2")
-config/icon="res://Textures/icon.png"
+config/features=PackedStringArray("4.3")
+config/icon="res://Main/icon.png"
 
 [physics]
 
