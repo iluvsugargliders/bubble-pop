@@ -1,3 +1,37 @@
-[gd_scene format=3 uid="uid://cd5nxssueqosr"]
+[gd_scene load_steps=3 format=3 uid="uid://cd5nxssueqosr"]
+
+[ext_resource type="PackedScene" uid="uid://by30tjkp2u1d3" path="res://Bubble/bubble.tscn" id="1_ubvc8"]
+[ext_resource type="Script" path="res://Main/main.gd" id="1_wpg0g"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_wpg0g")
+
+[node name="Bubble" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(74, 555)
+
+[node name="Bubble2" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(502, 735)
+
+[node name="Bubble3" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(410, 570)
+
+[node name="Bubble4" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(291, 411)
+
+[node name="Bubble5" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(201, 759)
+
+[node name="Bubble6" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(779, 343)
+
+[node name="Bubble7" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(686, 568)
+
+[node name="Bubble8" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(898, 736)
+
+[node name="Bubble9" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(992, 506)
+
+[node name="Bubble10" parent="." instance=ExtResource("1_ubvc8")]
+position = Vector2(1144, 676)
