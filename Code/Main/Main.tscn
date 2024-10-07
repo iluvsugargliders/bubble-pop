@@ -1,10 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd5nxssueqosr"]
+[gd_scene load_steps=2 format=3 uid="uid://cd5nxssueqosr"]
 
-[ext_resource type="PackedScene" uid="uid://x7npk1i7diym" path="res://Bubble/Bubble.tscn" id="1_boy3h"]
 [ext_resource type="Script" path="res://Main/main.gd" id="1_mwftl"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mwftl")
 
-[node name="Bubble" parent="." instance=ExtResource("1_boy3h")]
-position = Vector2(887, 257)
+[node name="Timer" type="Timer" parent="."]
+autostart = true
