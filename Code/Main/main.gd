@@ -2,10 +2,18 @@ extends Node
 class_name Main 
 
 const BUBBLE = preload("res://Bubble/bubble.tscn")
+@onready var timer: Timer = $Timer
+	
+func _ready() -> void:
+	#SpawnBubble()
+	timer.timeout.connect(OnTimedOut)
+	timer.wait_time = 0.25
+
+func OnTimedOut():
+	SpawnBubble()
+
 
 func SpawnBubble(): 
 	var bubble_instance = BUBBLE.instantiate()
-	bubble_instance.position = Vector2(100, 200)
+	bubble_instance.position = Vector2(randf_range(0,get_viewport().size.x), get_viewport().size.y)
 	add_child(bubble_instance)
-func _ready() -> void:
-	SpawnBubble()
