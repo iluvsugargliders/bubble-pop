@@ -1,24 +1,20 @@
 extends Node
 class_name Main
 
-#preloads the Bubble scene into Main script
 const BUBBLE = preload("res://Bubble/Bubble.tscn")
+@onready var timer: Timer = $Timer
 
-#what it says on the tin
-func SpawnBubble():
-	var bubble_instance = BUBBLE.instantiate()
-	bubble_instance.position = Vector2(400, 200) 
-	add_child(bubble_instance)
-
-
-
-
-
-#calls the SpawnBubble function
 func _ready() -> void:
+	timer.timeout.connect(OnTimedOut)
+	timer.wait_time = 0.25
+
+func OnTimedOut():
 	SpawnBubble()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func SpawnBubble():
+	var bubble_instance = BUBBLE.instantiate()
+	bubble_instance.position = Vector2(randf_range(0, get_viewport().size.x), get_viewport().size.y) 
+	add_child(bubble_instance)
+ 
 func _process(delta: float) -> void:
 	pass
