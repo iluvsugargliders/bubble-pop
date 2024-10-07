@@ -1,0 +1,18 @@
+extends Node
+class_name Main
+
+const BUBBLE = preload("res://Bubble/bubble.tscn")
+
+func SpawnBubble():
+	var bubble_instance = BUBBLE.instantiate()
+	bubble_instance.position = Vector2(600, 300)
+	add_child(bubble_instance)
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	SpawnBubble()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
