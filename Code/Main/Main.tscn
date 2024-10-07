@@ -4,3 +4,6 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_t3c8i")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
