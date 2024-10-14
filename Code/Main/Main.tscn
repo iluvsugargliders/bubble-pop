@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd5nxssueqosr"]
+[gd_scene load_steps=6 format=3 uid="uid://cd5nxssueqosr"]
 
 [ext_resource type="Script" path="res://Main/main.gd" id="1_he6eo"]
 [ext_resource type="PackedScene" uid="uid://bmduw1omvgqj8" path="res://Bubble/Bubble.tscn" id="2_3lgiv"]
+[ext_resource type="FontFile" uid="uid://df7bv83w00cry" path="res://Fonts/airstrip.ttf" id="3_e7alt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tdy1"]
+bg_color = Color(0.149428, 0.302451, 0.537845, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_dovka"]
+font = ExtResource("3_e7alt")
 
 [node name="Main" type="Node"]
 script = ExtResource("1_he6eo")
@@ -17,3 +28,15 @@ position = Vector2(583, 163)
 
 [node name="Bubble3" parent="." instance=ExtResource("2_3lgiv")]
 position = Vector2(345, 550)
+
+[node name="Scoreboard" type="PanelContainer" parent="."]
+offset_right = 109.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4tdy1")
+
+[node name="ScoreUI" type="Label" parent="Scoreboard"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "1234567890"
+label_settings = SubResource("LabelSettings_dovka")
+horizontal_alignment = 1
